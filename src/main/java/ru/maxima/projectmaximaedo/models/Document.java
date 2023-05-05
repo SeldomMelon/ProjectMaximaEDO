@@ -1,6 +1,7 @@
 package ru.maxima.projectmaximaedo.models;
 
 import java.time.LocalDateTime;
+import java.util.List;
 
 public class Document {
     /**
@@ -31,10 +32,14 @@ public class Document {
 //     * ссылка на файлы
 //     */
 //    private List<File> files;
-    /**
-     * ссылка на пользователя
-     */
+//    /**
+//     * ссылка на пользователя
+//     */
 //    private User user;
+    /**
+     * ссылка на поля документа
+     */
+    private List<DocumentTemplateField> fields;
     /**
      * флаг удаления
      */
@@ -43,8 +48,8 @@ public class Document {
     public Document() {
     }
 
-//    public Document(Long id, String name, LocalDateTime createdAt, String registryNumber,
-//                    DocumentTemplate template, Partner partner, List<File> files, Boolean isRemoved) {
+//    public Document(Long id, String name, LocalDateTime createdAt, String registryNumber, DocumentTemplate template, Partner partner,
+//                    List<File> files, User user, List<DocumentTemplateField> fields, Boolean isRemoved) {
 //        this.id = id;
 //        this.name = name;
 //        this.createdAt = createdAt;
@@ -52,6 +57,8 @@ public class Document {
 //        this.template = template;
 //        this.partner = partner;
 //        this.files = files;
+//        this.user = user;
+//        this.fields = fields;
 //        this.isRemoved = isRemoved;
 //    }
 
@@ -111,6 +118,15 @@ public class Document {
 //        this.files = files;
 //    }
 
+
+    public List<DocumentTemplateField> getFields() {
+        return fields;
+    }
+
+    public void setFields(List<DocumentTemplateField> fields) {
+        this.fields = fields;
+    }
+
     public Boolean getRemoved() {
         return isRemoved;
     }
@@ -139,6 +155,31 @@ public class Document {
 //        if (file != null) {
 //            this.files.remove(file);
 //            file.getFile().remove(this);
+//            return true;
+//        }
+//        return false;
+//    }
+
+    /**
+     * добавление полей в список
+     */
+//    public void addField(DocumentTemplateField field) {
+//        if(field != null) {
+//            this.fields.add(field);
+//            field.getField().add(this);
+//        }else{
+//            throw(new  NullPointerException());
+//        }
+//    }
+
+    /**
+     * удаление полей из списка
+     */
+//    public boolean removeField(long fieldId) {
+//        DocumentTemplateField field = this.fields.stream().filter(f -> f.getId() == fieldId).findFirst().orElse(null);
+//        if (field != null) {
+//            this.fields.remove(field);
+//            field.getField().remove(this);
 //            return true;
 //        }
 //        return false;
