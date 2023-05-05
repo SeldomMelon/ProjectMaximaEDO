@@ -26,6 +26,10 @@ public class Credential {
      */
     private CredentialType credentialType;
     /**
+     * ссылка на контрагента
+     */
+//    private Partner partner;
+    /**
      * флаг удаления
      */
     private Boolean isRemoved;
@@ -33,15 +37,16 @@ public class Credential {
     public Credential() {
     }
 
-    public Credential(Long id, String text, LocalDateTime createdAt,
-                      Integer version, CredentialType credentialType, Boolean isRemoved) {
-        this.id = id;
-        this.text = text;
-        this.createdAt = createdAt;
-        this.version = version;
-        this.credentialType = credentialType;
-        this.isRemoved = isRemoved;
-    }
+//    public Credential(Long id, String text, LocalDateTime createdAt, Integer version,
+//                      CredentialType credentialType, Partner partner, Boolean isRemoved) {
+//        this.id = id;
+//        this.text = text;
+//        this.createdAt = createdAt;
+//        this.version = version;
+//        this.credentialType = credentialType;
+//        this.partner = partner;
+//        this.isRemoved = isRemoved;
+//    }
 
     public Long getId() {
         return id;
@@ -82,6 +87,14 @@ public class Credential {
     public void setCredentialType(CredentialType credentialType) {
         this.credentialType = credentialType;
     }
+
+//    public Partner getPartner() {
+//        return partner;
+//    }
+//
+//    public void setPartner(Partner partner) {
+//        this.partner = partner;
+//    }
 
     public Boolean getRemoved() {
         return isRemoved;

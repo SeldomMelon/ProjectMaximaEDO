@@ -19,15 +19,21 @@ public class DocumentTemplateField {
      * Значение по умолчанию
      */
     private String defaultValue;
+    /**
+     *  ссылка на документ
+     */
+    private Document document;
 
     public DocumentTemplateField() {
     }
 
-    public DocumentTemplateField(String name, FieldType fieldType, String placeholder, String defaultValue) {
+    public DocumentTemplateField(String name,FieldType fieldType, String placeholder,
+                                 String defaultValue, Document document) {
         this.name = name;
         this.fieldType = fieldType;
         this.placeholder = placeholder;
         this.defaultValue = defaultValue;
+        this.document = document;
     }
 
     public String getName() {
@@ -60,5 +66,13 @@ public class DocumentTemplateField {
 
     public void setDefaultValue(String defaultValue) {
         this.defaultValue = defaultValue;
+    }
+
+    public Document getDocument() {
+        return document;
+    }
+
+    public void setDocument(Document document) {
+        this.document = document;
     }
 }
