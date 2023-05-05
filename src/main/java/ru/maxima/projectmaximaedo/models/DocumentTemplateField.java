@@ -24,17 +24,23 @@ public class DocumentTemplateField {
      */
     private Document document;
 
+    /**
+     * ссылка на шаблон документа
+     */
+//    private DocumentTemplate template;
+
     public DocumentTemplateField() {
     }
 
-    public DocumentTemplateField(String name,FieldType fieldType, String placeholder,
-                                 String defaultValue, Document document) {
-        this.name = name;
-        this.fieldType = fieldType;
-        this.placeholder = placeholder;
-        this.defaultValue = defaultValue;
-        this.document = document;
-    }
+//    public DocumentTemplateField(String name, FieldType fieldType, String placeholder,
+//                                 String defaultValue, Document document, DocumentTemplate template) {
+//        this.name = name;
+//        this.fieldType = fieldType;
+//        this.placeholder = placeholder;
+//        this.defaultValue = defaultValue;
+//        this.document = document;
+//        this.template = template;
+//    }
 
     public String getName() {
         return name;
@@ -75,4 +81,12 @@ public class DocumentTemplateField {
     public void setDocument(Document document) {
         this.document = document;
     }
+
+//    public DocumentTemplate getTemplate() {
+//        return template;
+//    }
+//
+//    public void setTemplate(DocumentTemplate template) {
+//        this.template = template;
+//    }
 }
