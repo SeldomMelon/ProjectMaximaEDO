@@ -20,12 +20,12 @@ public class DocumentTemplateField {
      */
     private String defaultValue;
     /**
-     *  ссылка на документ
+     *  Ссылка на документ
      */
     private Document document;
 
     /**
-     * ссылка на шаблон документа
+     * Ссылка на шаблон документа
      */
 //    private DocumentTemplate template;
 
